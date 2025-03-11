@@ -34,7 +34,6 @@ class DepartmentRepositoryTest extends DepartmentMetaData {
     }
 
     @Test
-    @Disabled
     void givenValidDepartmentIdWhenFindDepartmentByDepartmentIdThenNoException() {
 
         assertNotNull(departmentRepository.findByDepartmentId(1L));
