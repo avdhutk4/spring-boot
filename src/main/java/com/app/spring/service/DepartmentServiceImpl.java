@@ -29,6 +29,8 @@ public class DepartmentServiceImpl implements DepartmentService {
     public Department saveDepartment(Department department) {
         logger.info("Inside saveDepartment of DepartmentServiceImpl {}",
                 department);
+		logger.info("Inside saveDepartment of DepartmentServiceImpl1 {}",
+                department);
         return departmentRepository.save(department);
     }
 
@@ -78,7 +80,7 @@ public class DepartmentServiceImpl implements DepartmentService {
         if(Objects.nonNull(department.getDepartmentCode()) && !"".equals(department.getDepartmentCode())) {
             oldDept.setDepartmentCode(department.getDepartmentCode());
         }
-
+		logger.info("Inside updateDepartment of DepartmentServiceImpl {}", oldDept);
         return departmentRepository.save(oldDept);
     }
 
